@@ -2,7 +2,7 @@
      $table = "testTable";
 
 try {
-     
+
      $db = new PDO("mysql:dbname=testdb;host=localhost", "root", "" );
      $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );//Error Handling
 
@@ -21,9 +21,6 @@ try {
      Country VARCHAR( 50 ) NOT NULL);" ;
      $db->exec($sql);  
      
-
-     
-
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
