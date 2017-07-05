@@ -9,11 +9,13 @@
   $backToPath = "../../";
   //sử dụng đường dẫn $root và $webPath để upload hình ảnh vào thư mục public
 
+  //session start
+  session_start();
+
   //thêm các modul & controller
   include 'include.php';
 
   //sử dụng thư viện trait
-  use LibsFunc;
   //gọi function bằng cú pháp <Tên Trait>::<Tên function> thay thế cho phương thức extends
 
   // lấy action
@@ -31,6 +33,12 @@
     case 'home':
       include $adminPath."view/home.php";
       break;
+    case 'homeAct':
+        $mess = 'thành công';
+         $action = 'home';
+        // LibsFunc::uploadFile($file,$uploadPath);
+        Libs::redirect($action,$mess);
+        break;  
 
     default:
       //include lỗi 404 vào đây
