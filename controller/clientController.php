@@ -36,7 +36,7 @@
       $file = $_FILES['file'];
       $action = 'home';
       $mess = 'thành công';
-      // LibsFunc::uploadFile($file,$uploadPath);
+      // Libs::uploadFile($file,$uploadPath);
       Libs::redirect($action,$mess);
       break;
 
