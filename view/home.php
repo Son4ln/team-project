@@ -5,7 +5,7 @@
     </h1>
     <?php
       $alertLv ="danger";
-      Libs::showAlert($alertLv);
+      Libs::getAlert($alertLv);
     ?>
     <form action="?action=homeAct" method="post" enctype="multipart/form-data">
     	<input type="file" name="file" />
