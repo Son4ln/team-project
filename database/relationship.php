@@ -170,6 +170,32 @@
 		  catch(PDOException $e) {
         	echo $e->getMessage();
       	  }
+		  
+		  //categories với product
+		  try {
+			$categoriesToProduct = "Alter table products
+						   Add constraint	categoriesToProduct
+						   Foreign key (category_id)
+						   References categories (category_id);
+							";
+			$this->db->exec($categoriesToProduct);
+		  }
+		  catch(PDOException $e) {
+        	echo $e->getMessage();
+      	  }
+		  
+		  //product với orderDetail
+		  try {
+			$productToOrderDetail = "Alter table order_detail
+						   Add constraint	productToOrderDetail
+						   Foreign key (product_id)
+						   References products (product_id);
+							";
+			$this->db->exec($productToOrderDetail);
+		  }
+		  catch(PDOException $e) {
+        	echo $e->getMessage();
+      	  }
 			
 		}
 	}

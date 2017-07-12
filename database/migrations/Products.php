@@ -15,6 +15,7 @@
 							   create_date		date					Not null,
 							   update_date		date					Null,
 							   product_public	tinyint(1)				Not null,
+							   product_status	tinyint(1)				Not null,
 							   brand_id		int(11)					Not null,
 							   category_id		int(11)					Not null,
 							   image_id		int(11)					Not null,

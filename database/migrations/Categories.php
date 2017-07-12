@@ -8,7 +8,6 @@
 								 category_id		int(11)		Auto_increment	Not null,
 								 category_name	varchar(255)				Not null,
 								 category_public	tinyint(1)				Not null,
-								 brand_id		int(11)					Not null,
 								 Primary key (category_id)
 								 );
 								";
